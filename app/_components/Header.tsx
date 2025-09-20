@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaUser } from 'react-icons/fa';
 import { auth } from '../firebase/config';
 import { onAuthStateChanged, User } from 'firebase/auth';
@@ -64,9 +65,18 @@ export default function Header({ className = '' }: HeaderProps) {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/">
-            <h1 className="text-2xl font-bold text-[#1A237E] cursor-pointer hover:text-[#283593] transition-colors">
-              Satya
-            </h1>
+            <div className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition-opacity">
+              <Image 
+                src="/satya-logo.png" 
+                alt="Satya Logo" 
+                width={40}
+                height={40}
+                className="object-contain"
+              />
+              <h1 className="text-2xl font-bold text-[#1A237E] hover:text-[#283593] transition-colors">
+                Satya
+              </h1>
+            </div>
           </Link>
           
           {/* Navigation */}
