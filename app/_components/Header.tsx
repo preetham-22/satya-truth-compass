@@ -65,15 +65,15 @@ export default function Header({ className = '' }: HeaderProps) {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition-opacity">
+            <div className="flex items-center space-x-3 cursor-pointer hover:opacity-80 transition-opacity">
               <Image 
                 src="/satya-logo.png" 
                 alt="Satya Logo" 
-                width={40}
-                height={40}
+                width={56}
+                height={56}
                 className="object-contain"
               />
-              <h1 className="text-2xl font-bold text-[#1A237E] hover:text-[#283593] transition-colors">
+              <h1 className="text-3xl font-bold text-[#1A237E] hover:text-[#283593] transition-colors">
                 Satya
               </h1>
             </div>
